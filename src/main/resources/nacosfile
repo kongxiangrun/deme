@@ -1,0 +1,23 @@
+user:
+    name: tom
+server:
+    port: 8081
+
+management:
+    endpoints:
+        jmx:
+            exposure:
+                include: "*"
+        web:
+            exposure:
+                include: "*"
+        health:
+            show-details: always
+
+
+
+spring:
+    cloud:
+        alicloud:
+            access-key: "****"
+            secret-key: "****"

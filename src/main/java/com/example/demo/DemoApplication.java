@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration;
+import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
@@ -13,6 +14,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableDiscoveryClient
+@EnableSwagger2Doc
 public class DemoApplication extends SpringBootServletInitializer implements ApplicationRunner {
 
 
