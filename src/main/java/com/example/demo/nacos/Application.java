@@ -10,6 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -82,6 +83,10 @@ class SampleRunner implements ApplicationRunner {
 @RefreshScope
 class SampleController {
 
+
+	@Autowired
+	private DemodemoApi demodemoApi;
+
 	@Value("${user.name}")
 	String userName;
 
@@ -92,4 +97,13 @@ class SampleController {
 	public String simple() {
 		return "Hello Nacos Config!" + "Hello " + userName + " " + age + "!";
 	}
+
+
+
+	@RequestMapping("/demodemouser")
+	public String demodemouser() {
+		return demodemoApi.user();
+	}
+
+
 }

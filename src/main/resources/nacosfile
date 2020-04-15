@@ -21,3 +21,8 @@ spring:
         alicloud:
             access-key: "****"
             secret-key: "****"
+
+
+feign:
+    hystrix:
+        enabled: true
