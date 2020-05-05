@@ -59,6 +59,9 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
 
+        <!--自增主键有可能用到   useGeneratedKeys="true" keyProperty="id"  -->
+
+
         <!-- 指定数据库表 -->
         <table schema="" tableName="db"></table>
     </context>
